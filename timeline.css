@@ -6,6 +6,7 @@
 
 .time-line{
 	background: aliceblue;
+	width: 50%;
 }
 
 
@@ -24,6 +25,7 @@
 .time-line-date-panel{
 	width:40%;
 	padding: 10px;
+	background: orange;
 }
 .time-line-circle-panel{
 	padding: 10px;
@@ -31,6 +33,7 @@
 .time-line-content-panel{
 	width:40%;
 	padding: 10px;
+	background: yellow;
 }
 
 .time-line-circle{
@@ -42,6 +45,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.time-line-circle-margin{
+.time-line-item-margin{
     margin-top: 40px;
 }

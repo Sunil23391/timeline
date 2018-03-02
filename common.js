@@ -1,6 +1,10 @@
 
 $(document).ready(function(){
     var te = $(".timeline-example").timeline({
+    	formatDate:{
+    		status:true,
+    		format:'yyyy/MM/dd'
+    	},
     	data:[{
     		date:'23 march 1991',
     		event:'My Birthday'
