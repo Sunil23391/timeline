@@ -7,6 +7,7 @@
 .time-line{
 	background: aliceblue;
 	width: 50%;
+    height: -webkit-fill-available;
 }
 
 
@@ -22,29 +23,67 @@
     float: left;
     padding: 10px;
 }
+
+.time-line-tends-right{
+	/*float: right;*/
+}
+
 .time-line-date-panel{
+	position: relative;
 	width:40%;
 	padding: 10px;
-	background: orange;
+	left:10px;
+	/*background: orange;*/
 }
+
 .time-line-circle-panel{
+	position: relative;
 	padding: 10px;
 }
 .time-line-content-panel{
+	position: relative;
 	width:40%;
 	padding: 10px;
-	background: yellow;
+	/*background: yellow;*/
 }
+
+
+.time-line-date-area{
+	position: absolute;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.time-line-date-area:hover{
+    left:14px;
+}
+
+.time-line-date-box{
+    background: #45adef;
+    border: 2px solid #4989e9;
+    border-radius: 4px;
+    color: #5914d4;
+    padding: 3px;
+    opacity: 0.7;
+    cursor: pointer;
+    -webkit-transition: all 0.4s; 
+    transition: all 0.4s;
+}
+
+.time-line-date-box:hover{
+    border: 2px solid #4989e9;
+    color: #fff;
+    font-weight: bold;
+    opacity: 1;
+}
+
 
 .time-line-circle{
-	width: 20px;
-	height: 20px;
-	border-radius: 20px;
-	background: #5acf8c;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.time-line-item-margin{
-    margin-top: 40px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    border-radius: 20px;
+    background: #5acf8c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

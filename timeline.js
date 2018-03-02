@@ -121,20 +121,33 @@ Timeline.prototype.createPanels = function createPanels(mainPanel) {
 
 Timeline.prototype.renderDate = function renderCircle(event,index) {
 	var self = this;
+	var prfx = TIMELINECONSTANTS.CLASSPREFIX;
+
+	var dateArea = document.createElement("div");
+	var $dateArea = $(dateArea);
 	var dateBox = document.createElement("div");
 	var $dateBox = $(dateBox);
+
 	if(self.formatDate && self.formatDate.status)
 		$dateBox.html(formatDate(new Date(event.date),self.formatDate.format));
 	else
 		$dateBox.html(event.date);
 
-	if(index){
-		$dateBox
-		.addClass('time-line-item-margin');
-		
-	}
+	$dateArea
+	.addClass(prfx+'date-area');
 
-	self.panels.$datePanel.append(dateBox);
+	$dateBox
+	.addClass(prfx+'date-box');
+
+	$dateArea.css({
+		top:(index+1)*60+'px'
+	});	
+
+
+
+
+	$dateArea.append(dateBox);
+	self.panels.$datePanel.append(dateArea);
 }
 
 
@@ -147,11 +160,10 @@ Timeline.prototype.renderCircle = function renderCircle(event,index) {
 	$circle
 	.addClass('time-line-circle');
 
+	$circle.css({
+		top:(index+1)*59+'px'
+	});	
 
-	if(index){
-		$circle
-		.addClass('time-line-item-margin');
-	}
 
 		
 
